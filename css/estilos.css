@@ -1,7 +1,7 @@
 ﻿/* Aula inicial :D */
 body {
     background-image: url(https://cdn.pixabay.com/photo/2015/09/09/16/05/forest-931706_960_720.jpg);
-    background-size: auto 100vh;
+    background-size: 100%;
     /* se eu quiser usar cor, fazer
   background-color: nome da cor ou em hexadecimal
   O padrão da fonte é Times*/
