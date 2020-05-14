@@ -1,0 +1,45 @@
+﻿/* Aula inicial :D */
+body {
+    background-image: url(https://cdn.pixabay.com/photo/2015/09/09/16/05/forest-931706_960_720.jpg);
+    background-size: auto 100vh;
+    /* se eu quiser usar cor, fazer
+  background-color: nome da cor ou em hexadecimal
+  O padrão da fonte é Times*/
+    font-family: Calibri;
+    height: 100vh;
+}
+
+/*começa com ponto porque é uma classe */
+.menu {
+    background-color: white;
+}
+
+.menu ul {
+    display: flex;
+    justify-content: space-around;
+}
+
+.menu li {
+    list-style: none;
+}
+
+/*Cada abertura e fechament de chaves vai configurar um trecho declarado no HTML */
+a {
+    color: teal;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/*Caso queira usar a mesma propriedade para objetos da mesma classe, fazer assim: */
+.site-subtitle,
+.site-title {
+    color: whitesmoke;
+    text-align: center;
+}
+
+.site-subtitle {
+    font-style: italic;
+}
