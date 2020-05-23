@@ -12,31 +12,42 @@ body {
   O padrão da fonte é Times*/
     font-family: Calibri;
     height: 100vh;
+    font-size: 12px;
 }
+
+ /* breakpoint */
 @media (min-width: 400px) {
   body {
     font-size: 18px;
   }
 }
 
+ /* breakpoint */
 @media (min-width: 600px) {
   body {
     font-size: 22px;
   }
+
+  /* breakpoint */
+@media (min-width: 1200px) {
+  body {
+    font-size: 20px;
+  }
+}
 
 header {
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-wrap: wrap;
 }
 /*começa com ponto porque é uma classe */
 .menu {
     background-color: white;
     position: fixed;
-    top: 0;
     width: 100vw;
+    top: 0;
+    
 }
 
 .menu ul {
@@ -50,12 +61,18 @@ header {
 
 /*Cada abertura e fechament de chaves vai configurar um trecho declarado no HTML */
 .menu a {
-    color: teal;
     display: block;
-    padding: 10px;
-    text-decoration: none;
+    padding: 10px 20px;
 }
 
+a {
+  color: teal;
+  text-decoration: none;
+}
+
+a :hover{
+  text-decoration: underline;
+}
 /*fazer h2 apenas, formata tudo que é relacionado, passando por cima da formatação dentro dessa classe*/
 
 /*Caso queira usar a mesma propriedade para objetos da mesma classe, fazer assim: */
@@ -63,30 +80,28 @@ header {
 .site-title {
     color: black;
     text-align: center;
-    /*font-family: 'Press Start 2P', cursive;*/
-    font-family: 'Dancing Script', cursive;
 }
 
 .site-title{
     font-size: 4em;
+    font-family: Cambria;
 }
 .site-subtitle {
-  color: black;
   font-style: italic;
-  font-weight: lighter;
-  text-align: center;
-  font-size: 2em;
-}
-
-.interesses{
-    font-family: 'Dancing Script', cursive;
-    color: blanchedalmond;
+  font-family: 'Dancing Script', cursive;
+  line-height: 1.8em;
 }
 
 .interesses {
-    font-family: 'Dancing Script', cursive;
     padding: 2em;
-    color: blanchedalmond;
+    height: 100vh;
+}
+
+.interesses h2{
+  font-family: 'Dancing Script', cursive;
+  color: blanchedalmond;
+  margin-bottom: 1.5em;
+  font-size: 2em;
 }
 
 .interesses .grid{
@@ -100,9 +115,12 @@ header {
     }
 }
 
-@media (min-width: 880) {
+@media (min-width: 880px) {
     .interesses .grid {
-        grid-template-columns: 240px 240px 240px;
+      grid-template-columns: repeat(3, 260px);
+      align-content: center;
+      justify-content: center;
+      height: calc(100vh - 8em - 48px);
     }
 }
 
@@ -111,6 +129,8 @@ header {
 }
 
 .img-portfolio {
-    height: 180px;
-    width: 180px;
+  height: 180px;
+  width: 240px;
+  object-fit: fill;
+  object-position: left bottom;
 }
